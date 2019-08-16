@@ -19,14 +19,15 @@ $color-black: #000;
 *,
 *::after,
 *::before {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: inherit;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit;
 }
 
 html {
-    font-size: 62.5%;
-    /*  
+  // 62.5
+  font-size: 62.5%;
+  /*  
         1rem = 10px 
         Because rem is directly associated with root 
         By default faunt size provided by user's client that is browser is 16 px
@@ -34,59 +35,56 @@ html {
 }
 
 body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    /* font-size: 16px; */
-    line-height: 1.7; /* It means line height will be 1.7 time larger than original */
-    color: $colora-grey-dark;
-    /* padding: 3rem; */
-    box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7; /* It means line height will be 1.7 time larger than original */
+  color: $colora-grey-dark;
+  /* padding: 3rem; */
+  box-sizing: border-box;
 }
-
 
 .header {
-    height: 95vh; /* Always 95% of viewport height */
-    background-image: linear-gradient(
-        to right bottom, 
-        rgba($color-primary,0.8), 
-        rgba($color-primary-dark,0.8)), 
-        url(../img/hero.jpg);
-    background-size: cover;
-    background-position: top; /* It will fix that part image*/
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-    position: relative;
+  height: 95vh; /* Always 95% of viewport height */
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top; /* It will fix that part image*/
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  position: relative;
 
-}
-
-.header__logo-box {
+  &__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
-}
+  }
 
-.header__logo {
+  &__logo {
     height: 3.5rem;
-}
+  }
 
-
-.header__text-box {
+  &__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+  }
 }
 
 .heading-primary {
-    color: $color-white;
-    text-transform: uppercase;
+  color: $color-white;
+  text-transform: uppercase;
 
-    /*For removing shakin in animations*/
-    backface-visibility: hidden;
-    margin-bottom: 6rem;
-}
+  /*For removing shakin in animations*/
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
 
-.heading-primary--main {
+  &--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -94,14 +92,14 @@ body {
     animation-name: moveInLeft;
     animation-duration: 3s;
     animation-timing-function: ease-out;
-    
-    /* 
-    animation-delay: 3s; 
-    animation-iteration-count: 4;
-    */
-}
 
-.heading-primary--sub {
+    /* 
+        animation-delay: 3s; 
+        animation-iteration-count: 4;
+        */
+  }
+
+  &--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -110,102 +108,109 @@ body {
     animation-name: moveInRight;
     animation-duration: 3s;
     animation-timing-function: ease-out;
+  }
 }
 
-
 @keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-10rem) rotate(-180deg);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem) rotate(-180deg);
+  }
 
-    50% {
-    }
-    
-    80% {
-        transform: translateX(2rem)
-    }
+  50% {
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0) rotate(0deg);
-    }
+  80% {
+    transform: translateX(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
 }
 
 @keyframes moveInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(10rem);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
 
-    80% {
-        transform: translateX(-2rem)
-    }
+  80% {
+    transform: translateX(-2rem);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes moveInBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(10rem);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
 
-    80% {
-        transform: translateY(-2rem)
-    }
+  80% {
+    transform: translateY(-2rem);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-
-.btn:link,
-.btn:visited {
+.btn {
+  &:link,
+  &:visited {
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
     display: inline-block;
     border-radius: 10rem;
-    transition: all .2s;
+    transition: all 0.2s;
     position: relative;
     font-size: 1.6rem;
-    
-}
+  }
 
-.btn--animated {
+  &--animated {
     animation-name: moveInBottom;
     animation-timing-function: ease-in;
-    animation-delay: .75s;
+    animation-delay: 0.75s;
     animation-duration: 2s;
     /* Apply style to animation of 0%  */
     animation-fill-mode: backwards;
-}
+  }
 
-.btn:hover {
+  &:hover {
     transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem rgba($color-black,.21);
-}
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.21);
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
 
-.btn:active {
+  &:active {
     transform: translateY(-0.1rem);
-    box-shadow: 0 0.5rem 1rem rgba($color-black,.21);
-}
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.21);
+  }
 
-.btn--white {
+  &--white {
     background-color: $color-white;
     color: $colora-grey-dark;
-}
-/* :: Element and : class psudo */
 
-/* after is used to create child of the element we are using */
+    &::after {
+      background-color: $color-white;
+    }
+  }
+  /* :: Element and : class psudo */
 
-.btn::after {
+  /* after is used to create child of the element we are using */
+
+  &::after {
     content: "";
     display: inline-block;
     height: 100%;
@@ -215,14 +220,6 @@ body {
     top: 0rem;
     left: 0rem;
     z-index: -1;
-    transition: all .4s;
- }
-
-.btn--white::after {
-    background-color: $color-white;
-}
-
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
+    transition: all 0.4s;
+  }
 }
