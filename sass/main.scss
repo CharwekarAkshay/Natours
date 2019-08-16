@@ -7,6 +7,13 @@ Dark green: #28b485
 
 */
 
+$color-light-green: #7ed56f;
+$color-medium-green: #55c57a;
+$color-dark-green: #28b485;
+
+$color-white: #fff;
+$color-grey: #777;
+
 /* Applied to all component */
 *,
 *::after,
@@ -30,7 +37,7 @@ body {
     font-weight: 400;
     /* font-size: 16px; */
     line-height: 1.7; /* It means line height will be 1.7 time larger than original */
-    color: #777;
+    color: $color-grey;
     /* padding: 3rem; */
     box-sizing: border-box;
 }
@@ -40,8 +47,8 @@ body {
     height: 95vh; /* Always 95% of viewport height */
     background-image: linear-gradient(
         to right bottom, 
-        rgba(126, 213, 111,0.8), 
-        rgba(40,180,131,0.8)), 
+        rgba($color-light-green,0.8), 
+        rgba($color-dark-green,0.8)), 
         url(../img/hero.jpg);
     background-size: cover;
     background-position: top; /* It will fix that part image*/
@@ -69,7 +76,7 @@ body {
 }
 
 .heading-primary {
-    color: #fff;
+    color: $color-white;
     text-transform: uppercase;
 
     /*For removing shakin in animations*/
@@ -189,8 +196,8 @@ body {
 }
 
 .btn-white {
-    background-color: #fff;
-    color: #777;
+    background-color: $color-white;
+    color: $color-grey;
 }
 /* :: Element and : class psudo */
 
@@ -210,7 +217,7 @@ body {
  }
 
 .btn-white::after {
-    background-color: #fff;
+    background-color: $color-white;
 }
 
 .btn:hover::after {
