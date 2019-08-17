@@ -23,36 +23,7 @@ html {
     */ }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  /* It means line height will be 1.7 time larger than original */
-  color: #777;
-  /* padding: 3rem; */
   box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  /* Always 95% of viewport height */
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  /* It will fix that part image*/
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-  position: relative; }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
 
 .heading-primary {
   color: #fff;
@@ -69,9 +40,9 @@ body {
     animation-duration: 3s;
     animation-timing-function: ease-out;
     /* 
-        animation-delay: 3s; 
-        animation-iteration-count: 4;
-        */ }
+          animation-delay: 3s; 
+          animation-iteration-count: 4;
+          */ }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -80,6 +51,15 @@ body {
     animation-name: moveInRight;
     animation-duration: 3s;
     animation-timing-function: ease-out; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  /* It means line height will be 1.7 time larger than original */
+  color: #777;
+  /* padding: 3rem; */ }
 
 @keyframes moveInLeft {
   0% {
@@ -156,3 +136,25 @@ body {
     left: 0rem;
     z-index: -1;
     transition: all 0.4s; }
+
+.header {
+  height: 95vh;
+  /* Always 95% of viewport height */
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  /* It will fix that part image*/
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
