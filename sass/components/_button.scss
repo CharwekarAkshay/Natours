@@ -45,6 +45,15 @@
     }
   }
 
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
   /* :: Element and : class psudo */
 
   /* after is used to create child of the element we are using */
