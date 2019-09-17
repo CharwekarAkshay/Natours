@@ -16,10 +16,28 @@ html {
         Because rem is directly associated with root 
         By default faunt size provided by user's client that is browser is 16 px
     */
+
+  @include respond-phone {
+    font-size: 50%;
+  }
+
+  @include respond(phone) {
+    font-size: 50%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 60%;
+  } 
+
+  @include respond(tab-land) {
+    font-size: 70%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 80%;
+  }
 }
 
 body {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-
-
