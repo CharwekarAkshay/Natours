@@ -17,24 +17,22 @@ html {
         By default faunt size provided by user's client that is browser is 16 px
     */
 
-  @include respond-phone {
-    font-size: 50%;
-  }
+  // @include respond(phone) {
+  //   font-size: 50%;
+  // } 
+  // We don't need it here because we by default style for tab-port will be applied to phone devices
 
-  @include respond(phone) {
-    font-size: 50%;
+  
+  @include respond(tab-land) {
+    font-size: 56.25%;
   }
 
   @include respond(tab-port) {
-    font-size: 60%;
+    font-size: 50%;
   } 
 
-  @include respond(tab-land) {
-    font-size: 70%;
-  }
-
   @include respond(big-desktop) {
-    font-size: 80%;
+    font-size: 75%;
   }
 }
 
